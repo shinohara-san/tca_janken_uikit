@@ -10,6 +10,7 @@
 		1B5C3DC129CEC8040080122E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1B5C3DC029CEC8040080122E /* ComposableArchitecture */; };
 		1B5C3DC329CECA860080122E /* Janken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5C3DC229CECA860080122E /* Janken.swift */; };
 		1B5C3DC529CF07B40080122E /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5C3DC429CF07B40080122E /* Hand.swift */; };
+		1B5C3DD129CF0E8C0080122E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5C3DD029CF0E8C0080122E /* Tests.swift */; };
 		1BAC418D29CEC3180054ED9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC418C29CEC3180054ED9C /* AppDelegate.swift */; };
 		1BAC418F29CEC3180054ED9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC418E29CEC3180054ED9C /* SceneDelegate.swift */; };
 		1BAC419129CEC3180054ED9C /* JankenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC419029CEC3180054ED9C /* JankenViewController.swift */; };
@@ -18,9 +19,21 @@
 		1BAC419929CEC3190054ED9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAC419729CEC3190054ED9C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1B5C3DD229CF0E8C0080122E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BAC418129CEC3180054ED9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BAC418829CEC3180054ED9C;
+			remoteInfo = tca_janken_uikit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1B5C3DC229CECA860080122E /* Janken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Janken.swift; sourceTree = "<group>"; };
 		1B5C3DC429CF07B40080122E /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		1B5C3DCE29CF0E8C0080122E /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5C3DD029CF0E8C0080122E /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		1BAC418929CEC3180054ED9C /* tca_janken_uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tca_janken_uikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAC418C29CEC3180054ED9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BAC418E29CEC3180054ED9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B5C3DCB29CF0E8C0080122E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BAC418629CEC3180054ED9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +63,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B5C3DCF29CF0E8C0080122E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1B5C3DD029CF0E8C0080122E /* Tests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		1BAC418029CEC3180054ED9C = {
 			isa = PBXGroup;
 			children = (
 				1BAC418B29CEC3180054ED9C /* tca_janken_uikit */,
+				1B5C3DCF29CF0E8C0080122E /* Tests */,
 				1BAC418A29CEC3180054ED9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1BAC418929CEC3180054ED9C /* tca_janken_uikit.app */,
+				1B5C3DCE29CF0E8C0080122E /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,11 +96,11 @@
 				1BAC418E29CEC3180054ED9C /* SceneDelegate.swift */,
 				1BAC419029CEC3180054ED9C /* JankenViewController.swift */,
 				1B5C3DC229CECA860080122E /* Janken.swift */,
+				1B5C3DC429CF07B40080122E /* Hand.swift */,
 				1BAC419229CEC3180054ED9C /* Main.storyboard */,
 				1BAC419529CEC3190054ED9C /* Assets.xcassets */,
 				1BAC419729CEC3190054ED9C /* LaunchScreen.storyboard */,
 				1BAC419A29CEC3190054ED9C /* Info.plist */,
-				1B5C3DC429CF07B40080122E /* Hand.swift */,
 			);
 			path = tca_janken_uikit;
 			sourceTree = "<group>";
@@ -78,6 +108,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1B5C3DCD29CF0E8C0080122E /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B5C3DD429CF0E8C0080122E /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				1B5C3DCA29CF0E8C0080122E /* Sources */,
+				1B5C3DCB29CF0E8C0080122E /* Frameworks */,
+				1B5C3DCC29CF0E8C0080122E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B5C3DD329CF0E8C0080122E /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 1B5C3DCE29CF0E8C0080122E /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1BAC418829CEC3180054ED9C /* tca_janken_uikit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BAC419D29CEC3190054ED9C /* Build configuration list for PBXNativeTarget "tca_janken_uikit" */;
@@ -108,6 +156,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					1B5C3DCD29CF0E8C0080122E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 1BAC418829CEC3180054ED9C;
+					};
 					1BAC418829CEC3180054ED9C = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -130,11 +182,19 @@
 			projectRoot = "";
 			targets = (
 				1BAC418829CEC3180054ED9C /* tca_janken_uikit */,
+				1B5C3DCD29CF0E8C0080122E /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1B5C3DCC29CF0E8C0080122E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BAC418729CEC3180054ED9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +208,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1B5C3DCA29CF0E8C0080122E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B5C3DD129CF0E8C0080122E /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BAC418529CEC3180054ED9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +229,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B5C3DD329CF0E8C0080122E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BAC418829CEC3180054ED9C /* tca_janken_uikit */;
+			targetProxy = 1B5C3DD229CF0E8C0080122E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1BAC419229CEC3180054ED9C /* Main.storyboard */ = {
@@ -182,6 +258,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1B5C3DD529CF0E8C0080122E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFG989R8XR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shinohara.yuki.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tca_janken_uikit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tca_janken_uikit";
+			};
+			name = Debug;
+		};
+		1B5C3DD629CF0E8C0080122E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFG989R8XR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shinohara.yuki.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tca_janken_uikit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tca_janken_uikit";
+			};
+			name = Release;
+		};
 		1BAC419B29CEC3190054ED9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,6 +467,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B5C3DD429CF0E8C0080122E /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B5C3DD529CF0E8C0080122E /* Debug */,
+				1B5C3DD629CF0E8C0080122E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1BAC418429CEC3180054ED9C /* Build configuration list for PBXProject "tca_janken_uikit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

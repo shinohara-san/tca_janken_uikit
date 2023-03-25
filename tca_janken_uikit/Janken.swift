@@ -71,7 +71,7 @@ private func makeComputerHand() -> Hand {
     Hand(rawValue: Int.random(in: 0...2))!
 }
 
-private func drawComputerHand(_ hand: Hand) -> UIImage {
+func drawComputerHand(_ hand: Hand) -> UIImage {
     let img: UIImage
     switch hand {
     case .gu:
@@ -84,7 +84,7 @@ private func drawComputerHand(_ hand: Hand) -> UIImage {
     return img
 }
 
-private func judge(mine: Hand, computer: Hand) -> JankenResult {
+func judge(mine: Hand, computer: Hand) -> JankenResult {
     if mine == computer {
         return .draw
     }
