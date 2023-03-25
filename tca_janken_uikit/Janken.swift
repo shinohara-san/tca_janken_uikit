@@ -11,11 +11,15 @@ struct Janken: ReducerProtocol {
 
     struct State: Equatable {
         var image = UIImage(named: "janken_top")
+        var isShowingAlert = false
+        var alertMessage: String?
     }
 
     enum Action: Equatable {
         case myHandTapped(Hand)
         case judge(myHand: Hand, comHand: Hand)
+        case showAlert(message: String)
+        case dismissAlert
     }
 
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
@@ -28,12 +32,20 @@ struct Janken: ReducerProtocol {
             let result = judge(mine: myHand, computer: comHand)
             switch result {
             case .win:
-                print("win")
+                return .send(.showAlert(message: "勝ち！"))
             case .lose:
-                print("lose")
+                return .send(.showAlert(message: "負け.."))
             case .draw:
-                print("draw")
+                return .send(.showAlert(message: "引き分け"))
             }
+        case .showAlert(message: let message):
+            state.isShowingAlert = true
+            state.alertMessage = message
+            return .none
+        case .dismissAlert:
+            state.isShowingAlert = false
+            state.alertMessage = nil
+            state.image = UIImage(named: "janken_top")
             return .none
         }
     }

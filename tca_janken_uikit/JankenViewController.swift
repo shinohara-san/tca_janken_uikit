@@ -15,7 +15,7 @@ class JankenViewController: UIViewController {
     private var cancellables: Set<AnyCancellable> = []
 
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +23,13 @@ class JankenViewController: UIViewController {
             .map { $0.image }
             .assign(to: \.image, on: imageView)
             .store(in: &cancellables)
+        
+        self.viewStore.publisher
+              .map(\.isShowingAlert)
+              .removeDuplicates()
+              .filter { $0 }
+              .sink(receiveValue: { [weak self] _ in self?.presentAlert() })
+              .store(in: &cancellables)
     }
 
     @IBAction private func didTapGu(_ sender: UIButton) {
@@ -36,5 +43,15 @@ class JankenViewController: UIViewController {
     @IBAction private func didTapPa(_ sender: UIButton) {
         viewStore.send(.myHandTapped(.pa))
     }
+
+    private func presentAlert() {
+        let alert = UIAlertController(title: "結果",
+                                      message: viewStore.state.alertMessage,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: { _ in self.viewStore.send(.dismissAlert) }))
+        present(alert, animated: true)
+      }
 }
 
