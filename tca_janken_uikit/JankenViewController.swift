@@ -7,12 +7,21 @@
 
 import UIKit
 import Combine
+import ComposableArchitecture
 
-class ViewController: UIViewController {
+class JankenViewController: UIViewController {
+
+    private let viewStore: ViewStoreOf<Janken> = ViewStore(Store(initialState: Janken.State(), reducer: Janken())) // TODO: should be injected through init
+    private var cancellables: Set<AnyCancellable> = []
 
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.viewStore.publisher
+            .map { $0.result }
+            .assign(to: \.image, on: imageView)
+            .store(in: &cancellables)
     }
     @IBAction private func didTapGu(_ sender: UIButton) {
     }
