@@ -32,6 +32,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="ぐー">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapGu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xy7-f5-EFV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTG-Zz-1Ms">
                                                 <rect key="frame" x="123" y="0.0" width="115" height="72.666666666666671"/>
@@ -40,6 +43,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="ちょき">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapChoki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6In-cW-VD7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eF1-cC-wYn">
                                                 <rect key="frame" x="246" y="0.0" width="115" height="72.666666666666671"/>
@@ -48,6 +54,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="ぱー">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapPa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DC-gt-DyC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -66,6 +75,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UXM-x6-9kd" secondAttribute="bottom" constant="16" id="uyj-iy-XU4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="weN-Oo-6XS" id="mpQ-Pp-0dC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
