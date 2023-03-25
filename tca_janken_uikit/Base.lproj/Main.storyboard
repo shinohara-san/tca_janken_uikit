@@ -17,16 +17,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UXM-x6-9kd">
-                                <rect key="frame" x="16" y="75" width="361" height="727"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="weN-Oo-6XS">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="646.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="675"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J5M-b5-9LR">
-                                        <rect key="frame" x="0.0" y="654.33333333333337" width="361" height="72.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="683" width="393" height="76"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csS-zy-LrW">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="76"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="8uq-e5-WP9"/>
+                                                </constraints>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgX-GI-14a">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="72.666666666666671"/>
+                                                <rect key="frame" x="24.000000000000007" y="0.0" width="109.66666666666669" height="76"/>
                                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="ぐー">
@@ -37,7 +44,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTG-Zz-1Ms">
-                                                <rect key="frame" x="123" y="0.0" width="115" height="72.666666666666671"/>
+                                                <rect key="frame" x="141.66666666666666" y="0.0" width="109.66666666666666" height="76"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="ちょき">
@@ -48,7 +55,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eF1-cC-wYn">
-                                                <rect key="frame" x="246" y="0.0" width="115" height="72.666666666666671"/>
+                                                <rect key="frame" x="259.33333333333331" y="0.0" width="109.66666666666669" height="76"/>
                                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="ぱー">
@@ -58,7 +65,18 @@
                                                     <action selector="didTapPa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DC-gt-DyC"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-4h-nCe">
+                                                <rect key="frame" x="377" y="0.0" width="16" height="76"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="aaU-9D-3Kv"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="IgX-GI-14a" firstAttribute="width" secondItem="iTG-Zz-1Ms" secondAttribute="width" id="Hr0-Nu-xrI"/>
+                                            <constraint firstItem="IgX-GI-14a" firstAttribute="width" secondItem="eF1-cC-wYn" secondAttribute="width" id="Uzw-e5-WdV"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -69,10 +87,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UXM-x6-9kd" secondAttribute="trailing" constant="16" id="2ef-Jt-yFr"/>
-                            <constraint firstItem="UXM-x6-9kd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="J52-Ic-mkq"/>
-                            <constraint firstItem="UXM-x6-9kd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="pj8-K9-vEB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UXM-x6-9kd" secondAttribute="bottom" constant="16" id="uyj-iy-XU4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UXM-x6-9kd" secondAttribute="trailing" id="2ef-Jt-yFr"/>
+                            <constraint firstItem="UXM-x6-9kd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J52-Ic-mkq"/>
+                            <constraint firstItem="UXM-x6-9kd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pj8-K9-vEB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UXM-x6-9kd" secondAttribute="bottom" id="uyj-iy-XU4"/>
                         </constraints>
                     </view>
                     <connections>
