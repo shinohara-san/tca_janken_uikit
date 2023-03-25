@@ -15,21 +15,26 @@ class JankenViewController: UIViewController {
     private var cancellables: Set<AnyCancellable> = []
 
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.viewStore.publisher
-            .map { $0.result }
+            .map { $0.image }
             .assign(to: \.image, on: imageView)
             .store(in: &cancellables)
     }
+
     @IBAction private func didTapGu(_ sender: UIButton) {
+        viewStore.send(.myHandTapped(.gu))
     }
 
     @IBAction private func didTapChoki(_ sender: UIButton) {
+        viewStore.send(.myHandTapped(.choki))
     }
 
     @IBAction private func didTapPa(_ sender: UIButton) {
+        viewStore.send(.myHandTapped(.pa))
     }
 }
 
