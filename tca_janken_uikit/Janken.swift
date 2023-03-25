@@ -10,9 +10,11 @@ import ComposableArchitecture
 struct Janken: ReducerProtocol {
 
     struct State: Equatable {
+        var score = 0
         var image = UIImage(named: "janken_top")
         var isShowingAlert = false
         var alertMessage: String?
+        var isShowingActionSheet = false
     }
 
     enum Action: Equatable {
@@ -20,6 +22,9 @@ struct Janken: ReducerProtocol {
         case judge(myHand: Hand, comHand: Hand)
         case showAlert(message: String)
         case dismissAlert
+        case showActionSheet
+        case resetScore
+        case dismissActionSheet
     }
 
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
@@ -32,8 +37,10 @@ struct Janken: ReducerProtocol {
             let result = judge(mine: myHand, computer: comHand)
             switch result {
             case .win:
+                state.score += 1
                 return .send(.showAlert(message: "勝ち！"))
             case .lose:
+                state.score -= 1
                 return .send(.showAlert(message: "負け.."))
             case .draw:
                 return .send(.showAlert(message: "引き分け"))
@@ -46,6 +53,15 @@ struct Janken: ReducerProtocol {
             state.isShowingAlert = false
             state.alertMessage = nil
             state.image = UIImage(named: "janken_top")
+            return .none
+        case .showActionSheet:
+            state.isShowingActionSheet = true
+            return .none
+        case .resetScore:
+            state = Janken.State()
+            return .none
+        case .dismissActionSheet:
+            state.isShowingActionSheet = false
             return .none
         }
     }
