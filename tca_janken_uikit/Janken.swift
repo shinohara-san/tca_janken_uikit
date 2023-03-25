@@ -67,17 +67,11 @@ struct Janken: ReducerProtocol {
     }
 }
 
-enum Hand: Int, Equatable {
-    case gu
-    case choki
-    case pa
-}
-
-func makeComputerHand() -> Hand {
+private func makeComputerHand() -> Hand {
     Hand(rawValue: Int.random(in: 0...2))!
 }
 
-func drawComputerHand(_ hand: Hand) -> UIImage {
+private func drawComputerHand(_ hand: Hand) -> UIImage {
     let img: UIImage
     switch hand {
     case .gu:
@@ -90,7 +84,7 @@ func drawComputerHand(_ hand: Hand) -> UIImage {
     return img
 }
 
-func judge(mine: Hand, computer: Hand) -> JankenResult {
+private func judge(mine: Hand, computer: Hand) -> JankenResult {
     if mine == computer {
         return .draw
     }

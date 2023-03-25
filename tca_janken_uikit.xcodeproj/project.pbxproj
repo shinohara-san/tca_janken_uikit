@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B5C3DC129CEC8040080122E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1B5C3DC029CEC8040080122E /* ComposableArchitecture */; };
 		1B5C3DC329CECA860080122E /* Janken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5C3DC229CECA860080122E /* Janken.swift */; };
+		1B5C3DC529CF07B40080122E /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5C3DC429CF07B40080122E /* Hand.swift */; };
 		1BAC418D29CEC3180054ED9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC418C29CEC3180054ED9C /* AppDelegate.swift */; };
 		1BAC418F29CEC3180054ED9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC418E29CEC3180054ED9C /* SceneDelegate.swift */; };
 		1BAC419129CEC3180054ED9C /* JankenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC419029CEC3180054ED9C /* JankenViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		1B5C3DC229CECA860080122E /* Janken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Janken.swift; sourceTree = "<group>"; };
+		1B5C3DC429CF07B40080122E /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		1BAC418929CEC3180054ED9C /* tca_janken_uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tca_janken_uikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAC418C29CEC3180054ED9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BAC418E29CEC3180054ED9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				1BAC419529CEC3190054ED9C /* Assets.xcassets */,
 				1BAC419729CEC3190054ED9C /* LaunchScreen.storyboard */,
 				1BAC419A29CEC3190054ED9C /* Info.plist */,
+				1B5C3DC429CF07B40080122E /* Hand.swift */,
 			);
 			path = tca_janken_uikit;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BAC419129CEC3180054ED9C /* JankenViewController.swift in Sources */,
+				1B5C3DC529CF07B40080122E /* Hand.swift in Sources */,
 				1BAC418D29CEC3180054ED9C /* AppDelegate.swift in Sources */,
 				1B5C3DC329CECA860080122E /* Janken.swift in Sources */,
 				1BAC418F29CEC3180054ED9C /* SceneDelegate.swift in Sources */,
